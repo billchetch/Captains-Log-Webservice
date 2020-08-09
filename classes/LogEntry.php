@@ -159,3 +159,4 @@ class LogEntry extends \chetch\db\DBObject{
 		return $event == $this->get("event");
 	}
 }
+?>

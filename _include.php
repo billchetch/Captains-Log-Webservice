@@ -47,7 +47,7 @@ try{
 	DB::connect(Config::get('DBHOST'), Config::get('DBNAME'), Config::get('DBUSERNAME'), Config::get('DBPASSWORD'));
 	DB::setUTC();
 
-	Logger::setLog(basename($_SERVER['PHP_SELF'], ".php"));
+	Logger::setLog(basename($_SERVER['PHP_SELF'], ".php"), Logger::LOG_TO_DATABASE);
 
 } catch (Exception $e){
 	echo "exception: ".$e->getMessage();
