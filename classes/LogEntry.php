@@ -27,9 +27,9 @@ class LogEntry extends \chetch\db\DBObject{
 	}
 
 	static public function getCrewStats($year = null){
-		if(!$year)$year = date('Y');
 		$stats = array();
-		$filter = "YEAR(created)=$year";
+		$filter = null;
+		if($year)$filter = "YEAR(created)=$year";
 		$rows = self::createCollectionAsRows(null, $filter, "created ASC");
 
 		$prevEntry = null;

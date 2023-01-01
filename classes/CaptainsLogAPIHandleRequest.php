@@ -27,7 +27,7 @@ class CaptainsLogAPIHandleRequest extends chetch\api\APIHandleRequest{
 				break;
 
 			case 'crew-stats':
-				$year = isset($params['year']) ? $params['year'] : date('Y');
+				$year = isset($params['year']) ? $params['year'] : null;
 				$data = LogEntry::getCrewStats($year);
 				break;
 
