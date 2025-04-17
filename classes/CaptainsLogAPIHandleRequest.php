@@ -8,7 +8,7 @@ class CaptainsLogAPIHandleRequest extends chetch\api\APIHandleRequest{
 		$requestParts = explode('/', $request);
 		switch($requestParts[0]){
 			case 'test':
-				$data = array('response'=>"Employees test Yeah baby");
+				$data = array('response'=>"Captains Log test Yeah baby");
 				break;
 
 			case 'about':
